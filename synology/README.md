@@ -1,4 +1,5 @@
-# Homelab Notes: Synology NAS
+# Homelab Notes: Synology NAS 
+# FARNSWORTH
 
 This document captures how our Synology NAS is used in the homelab (& production) environment.  
 The focus is on storage for primary operations and client services.
