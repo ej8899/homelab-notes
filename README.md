@@ -25,8 +25,6 @@ This repo provides:
 
 ## Structure of This Repository
 
-## Structure of This Repository
-
 ### Cloud Platforms
 - `aws/` – Notes & configurations for AWS usage.  
 - `oci/` – Documentation for Oracle Cloud (OCI).  
