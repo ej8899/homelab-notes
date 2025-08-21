@@ -4,6 +4,9 @@ This repository serves as the central hub for documenting the homelab environmen
 It exists not just to capture configurations and setups, but to provide **change tracking, reference material, and continuity** for a system that supports both **experimentation and production services**.
 
 ---
+**Note that a lot of our notes will be 'in progress' as we catch up and consolidate what can be publically shared**
+
+---
 
 ## Why Document a Homelab?
 

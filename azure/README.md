@@ -16,7 +16,12 @@ The focus is on experimentation, security, and hybrid integration with on-prem.
 
 ## Services in Use
 
-### 1. [Service Name]
+### 1. [Static Web]
+- Usage: 
+- Notes:
+- TODO:
+
+### 2. [Dataverse]
 - Usage:
 - Notes:
 - TODO:
