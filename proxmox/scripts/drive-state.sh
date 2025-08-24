@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 #
-# drive-state.sh — show hdparm state of drives (a, b, c, d) 
+# drive-state-auto.sh — show hdparm state of all /dev/sdX drives with colors
 #
-
-# Drives to check
-drives=(/dev/sd[a-d])
 
 # Colors
 if [[ -t 1 ]]; then
@@ -16,16 +13,19 @@ fi
 printf "${BOLD}%-8s %-12s${RESET}\n" "DRIVE" "STATE"
 printf "${BOLD}%-8s %-12s${RESET}\n" "-----" "-----"
 
-for d in "${drives[@]}"; do
+for d in /dev/sd?; do
   if [ -b "$d" ]; then
     state=$(hdparm -C "$d" 2>/dev/null | awk -F: '/state/ {gsub(/^[ \t]+/, "", $2); print $2}')
+    if [[ -z "$state" ]]; then
+      state="unknown"
+    fi
+
     case "$state" in
-      standby)   color="$GREEN" ;;
+      standby)       color="$GREEN" ;;
       "active/idle") color="$RED" ;;
-      *)         color="$YELLOW" ;;
+      *)             color="$YELLOW" ;;
     esac
+
     printf "%-8s ${color}%-12s${RESET}\n" "$d" "$state"
-  else
-    printf "%-8s ${YELLOW}%-12s${RESET}\n" "$d" "not present"
   fi
 done
