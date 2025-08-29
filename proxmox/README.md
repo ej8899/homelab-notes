@@ -5,10 +5,20 @@ This document captures cluster-wide settings and configurations for the Proxmox 
 ---
 
 ## Overview
-- **Cluster Name:** [e.g., homelab-cluster]
+- **Cluster Name:** DOOP
 - **Proxmox Version:** [e.g., 8.x]
-- **Number of Nodes:** [e.g., 3]
-- **Primary Roles:** [Virtualization / Containers / Lab workloads / Prod workloads]
+- **Number of Nodes:** 4
+- **Primary Roles:** Virtualization / Containers / Lab workloads / Prod workloads / Public Lab Web Server / Prod Dev Server / 
+
+| NODE | CPU(%) | RAM Used/Total | Disk Used/Total | Uptime(h) | vCPUs |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| hypnoserver | 4.5 | 8G/39G | 23G/94G | 55 | 4 |
+| lab | 1.7 | 2G/6G | 5G/68G | 105 | 4 |
+| nimbus | 4.1 | 12G/39G | 27G/94G | 632 | 4 |
+| vginy | 8.3 | 10G/23G | 24G/94G | 95 | 4 |
+| **TOTAL (util)** | **4.7** | **31G/107G** | **80G/350G** | | **vCPUs: 16** |
+
+(#TODO: fix our app - can we get total disk space instead of just boot disk?)
 
 ---
 
