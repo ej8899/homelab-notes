@@ -60,9 +60,13 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
 - TODO:
   - Document key Lambda scripts in `lambda/` folder.
 
+---
+
 ### 5. Bedrock
  - Usage:
    - varied AI integrations
+
+---
 
 ### 6. CloudWatch
  - Usage:
