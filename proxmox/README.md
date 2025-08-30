@@ -11,12 +11,13 @@ This document captures cluster-wide settings and configurations for the Proxmox 
 - **Primary Roles:** Virtualization / Containers / Lab workloads / Prod workloads / Public Lab Web Server / Prod Dev Server / 
 
 | NODE | CPU(%) | RAM Used/Total | Disk Used/Total | Uptime(h) | vCPUs |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| hypnoserver | 4.5 | 8G/39G | 23G/94G | 55 | 4 |
-| lab | 1.7 | 2G/6G | 5G/68G | 105 | 4 |
-| nimbus | 4.1 | 12G/39G | 27G/94G | 632 | 4 |
-| vginy | 8.3 | 10G/23G | 24G/94G | 95 | 4 |
-| **TOTAL (util)** | **4.7** | **31G/107G** | **80G/350G** | | **vCPUs: 16** |
+|---|---|---|---|---|---|
+| nimbus | 11.8 | 12G/39G | 27G/94G | 22 | 4 |
+| hypnoserver | 4.2 | 9G/39G | 24G/94G | 80 | 4 |
+| lab | 1.3 | 2G/21G | 5G/68G | 1 | 4 |
+| vginy | 3.3 | 10G/23G | 24G/94G | 120 | 4 |
+| NibblersNothings | 1.6 | 2G/15G | 4G/94G | 0 | 4 |
+| **TOTAL (util)** | **4.4** | **35G/138G** | **84G/444G** | | **vCPUs: 20** |
 
 (#TODO: fix our app - can we get total disk space instead of just boot disk?)
 
