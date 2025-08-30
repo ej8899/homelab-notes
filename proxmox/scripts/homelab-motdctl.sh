@@ -92,12 +92,13 @@ write_template () {
   install -d "$MOTD_DIR"
   cat > "$MOTD_FILE" <<'EOF'
 #!/bin/sh
-# 10-homelab — minimal colored MOTD (managed by homelab-motdctl)
+# 10-homelab — colored MOTD (managed by homelab-motdctl)
 # ABOUT_URL is set by the installer; leave blank to hide link.
 ABOUT_URL="__ABOUT_URL__"
 
-cyan='\033[1;36m'; green='\033[1;32m'; yellow='\033[1;33m'; mag='\033[1;35m'; blue='\033[1;34m'
-dim='\033[2m'; bold='\033[1m'; reset='\033[0m'
+ESC="$(printf '\033')"
+cyan="${ESC}[1;36m"; green="${ESC}[1;32m"; yellow="${ESC}[1;33m"; mag="${ESC}[1;35m"; blue="${ESC}[1;34m"
+dim="${ESC}[2m"; bold="${ESC}[1m"; reset="${ESC}[0m"
 
 DATE="$(date '+%a %b %d %I:%M:%S %p %Z %Y')"
 LOAD="$(cut -d' ' -f1-3 /proc/loadavg 2>/dev/null)"
