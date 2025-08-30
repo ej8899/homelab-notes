@@ -50,7 +50,7 @@ backup_now () {
     tar -C /etc -cpzf "${BACKUP_DIR}/update-motd.d-${ts}.tgz" "update-motd.d"
   else
     warn "No ${MOTD_DIR} directory to back up (will create fresh)"
-  end
+  fi
   if [[ -f /etc/motd ]]; then
     cp -a /etc/motd "${BACKUP_DIR}/motd-${ts}"
   fi
@@ -58,6 +58,7 @@ backup_now () {
   ok "Backup saved: ${ts}"
   echo "$ts"
 }
+
 
 restore_backup () {
   local ts="$1"
