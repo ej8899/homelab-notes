@@ -9,13 +9,12 @@ set -euo pipefail
 # ========================= USER CONFIG =========================
 # 1) Built-in hosts list (IPs or resolvable names). Edit to your environment.
 HOSTS_BUILTIN=(
-  "lab"             # example hostname (local box)
-  "hypnoserver"     # example hostname (update or remove)
-  "nimbus"          # example hostname (update or remove)
-  "vginy"           # example hostname (update or remove)
-  "NibblersNothings"# example hostname (update or remove)
-  # "192.168.1.10"  # example IP
-  # "192.168.1.11"
+  "lab"             
+  "hypnoserver"    
+  "nimbus"          
+  "vginy"           
+  "NibblersNothings"
+
 )
 
 # 2) Auto-discover from /etc/pve/corosync.conf ring0_addr (1=enabled, 0=disabled)
