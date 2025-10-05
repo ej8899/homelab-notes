@@ -11,6 +11,21 @@ Template:
 
 ---
 
+- **Date:** 2025-10-05  
+- **Change:** Installed and configured **Network UPS Tools (NUT)** on host **lab**.  
+  - Defined UPS name **`lab-ups`** (CyberPower CP1500 AVR) using `usbhid-ups` driver.  
+  - Verified operation via `upsc lab-ups@localhost`.  
+  - Integrated into **PeaNUT** dashboard for remote UPS status monitoring.  
+  - Added firewall rule to allow inbound TCP **3493** from PeaNUT host for NUT communication.  
+- **Reason:** Enable central UPS monitoring and graceful power-event visibility through PeaNUT.  
+- **Impact:** None — configuration performed live, no downtime.  
+- **Rollback:**  
+  - Remove `/etc/nut` configuration files (`ups.conf`, `upsd.conf`, `upsd.users`, `nut.conf`).  
+  - Stop NUT services: `upsdrvctl stop`, `systemctl stop nut-server`.  
+  - Delete firewall rule for TCP 3493 if no longer required.  
+- **Status:** Done  
+
+---
 
 - **Date:** 2025-10-02  
 - **Node:** Zoidberg
