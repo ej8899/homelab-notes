@@ -10,6 +10,16 @@ Template:
 - **Status:** [Planned / Done / Rolled Back]  
 
 
+
+---
+### Install GPT CLI Utility
+- **Date:** 2025-10-12  
+- **Change:** Installed a lightweight, colorized Bash-based OpenAI CLI tool (`gpt`) system-wide at `/usr/local/bin/gpt`. Added automatic dependency checks for `curl` and `jq`.  
+- **Reason:** To enable quick, general-purpose access to GPT models directly from the command line without needing a browser or external client.  
+- **Impact:** None to production systems; utility added locally for administrative and development convenience. No downtime.  
+- **Rollback:** Remove the CLI with `sudo rm -f /usr/local/bin/gpt` and unset `OPENAI_API_KEY` from shell profiles if desired.  
+- **Status:** Done  
+
 ---
 ### MongoDB Server Install
 - **Date:** 2025-10-08  
