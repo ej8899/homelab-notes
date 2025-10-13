@@ -9,6 +9,24 @@ Template:
 - **Rollback:** [How to undo]  
 - **Status:** [Planned / Done / Rolled Back]  
 
+
+---
+### Web Root Permissions & VS Code Workspace Update  
+- **Date:** 2025-10-13  
+- **Change:**  
+  - Adjusted `/var/www` ownership and permissions to allow non-root editing in VS Code.  
+  - Added `ej` user to the `www-data` group and applied group-writable permissions with `setgid` and default ACLs.  
+  - Updated VS Code workspace (`~/development/DevServer.code-workspace`) to include `/var/www` with custom folder name `dev-server-www`.  
+- **Reason:** Enable direct editing of web root files (`/var/www/html`) in VS Code without requiring `sudo`, while preserving secure group-based access for Nginx.  
+- **Impact:** None to running services; only modifies file permissions and VS Code workspace configuration.  
+- **Rollback:**  
+  ```bash
+  sudo deluser ej www-data
+  sudo chown -R root:root /var/www
+  sudo chmod -R 755 /var/www
+  sudo setfacl -bR /var/www
+  rm ~/development/DevServer.code-workspace   # optional
+
 ---
 ### System Info Dashboard
 - **Date:** 2025-10-13
