@@ -9,7 +9,14 @@ Template:
 - **Rollback:** [How to undo]  
 - **Status:** [Planned / Done / Rolled Back]  
 
-
+---
+### System Info Dashboard
+- **Date:** 2025-10-13
+- **Change:** Installed JSON data generator (`about-json.sh`), Nginx dashboard page, and systemd timer for automatic updates.
+- **Reason:** Enable quick on-host visibility of resource and service status.
+- **Impact:** None; read-only informational process.
+- **Rollback:** Disable timer/service and remove related files as outlined above (see full MD file on this)
+- **Status:** Done
 
 ---
 ### Install GPT CLI Utility
