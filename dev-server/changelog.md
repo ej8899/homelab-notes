@@ -11,6 +11,43 @@ Template:
 
 
 ---
+### Installed SQLite
+- **Date:** 2025-11-20
+- **Change:** Installed `sqlite3` command-line utility and `libsqlite3-dev` development headers via the `apt` package manager. Verified installation by checking the version output.
+- **Reason:** To enable serverless database prototyping and provide necessary compilation headers for application drivers (e.g., Python `sqlite3` module, Node.js `sqlite3` bindings).
+- **Impact:** **None.** No downtime required. New command-line tools are now available for all users on the server.
+- **Rollback:** Run `sudo apt remove sqlite3 libsqlite3-dev` to uninstall the packages.
+- **Status:** Done
+
+---
+### Installed Gemini CLI  
+- **Date:** 2025-10-28  
+- **Change:** Installed [Google Gemini CLI](https://github.com/google-gemini/gemini-cli) for local AI command-line usage and workflow integration.  
+- **Reason:** To enable direct interaction with Gemini models from the terminal for testing, automation, and development convenience.  
+- **Impact:** None; non-disruptive addition to the development environment.  
+- **Rollback:** Uninstall using `pip uninstall gemini-cli` or remove the related binary from the system path.  
+- **Status:** Done  
+
+---
+
+### NPM Update to v11.6.2  
+- **Date:** 2025-10-28  
+- **Change:** Updated NPM from version 10.9.3 to 11.6.2 using `npm install -g npm@11.6.2`.  
+- **Reason:** To apply the latest stability, performance, and security improvements as outlined in the [v11.6.2 changelog](https://github.com/npm/cli/releases/tag/v11.6.2).  
+- **Impact:** Minimal; affects global Node.js package management tools only. No downtime expected.  
+- **Rollback:** Reinstall previous version using `npm install -g npm@10.9.3`.  
+- **Status:** Done  
+
+---
+### Added GHCR access
+- **Date:** 2025-10-16  
+- **Change:** Logged in to `ghcr.io` using GitHub PAT for Docker builds.  
+- **Reason:** To enable pushing/pulling of custom images (e.g., QuickPrefs) from dev to deployment VM.  
+- **Impact:** Auth token stored at `~/.docker/config.json`; no service downtime.  
+- **Rollback:** Remove GHCR auth with `docker logout ghcr.io` or delete the token in GitHub settings.  
+- **Status:** Done
+
+---
 ### Web Root Permissions & VS Code Workspace Update  
 - **Date:** 2025-10-13  
 - **Change:**  
