@@ -41,7 +41,7 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
   - Outbound email alerts from monitoring tools.
   - Testing phishing simulations (safe/internal).
 - Notes:
-  - Sandbox mode vs. Production: [status]
+  - Sandbox mode vs. Production: [Production]
   - Verified domains: [ejmedia.ca, xp4cyber, additional confidential client domains]
 - TODO:
   - Track email metrics via CloudWatch.
@@ -72,7 +72,12 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
  - Usage:
    - misc monitoring
 
- 
+---
+
+### 7. RDS
+  - Usage:
+    - mysql database - misc tables for varied API usages - includes minor joined tables.
+    - daily SQLDump for backups - encrypted & transferred to EJM private data center storage
 
 ---
 
