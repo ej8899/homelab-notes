@@ -81,6 +81,12 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
 
 ---
 
+### 8. SNS
+   - Usage:
+      - notification for SES bounces and complaints (ignoring successes)
+
+---
+
 ## Security & Governance
 - MFA enabled for all accounts.
 - Root account locked down, not used for day-to-day.
