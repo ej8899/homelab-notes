@@ -14,7 +14,7 @@ This pipeline gives us a **central, automatic way** to track those problem addre
 
 High-level flow:
 
-**SES → SNS topic → Lambda → Webhook (PHP) → JSON log / future DB**
+**SES → SNS topic → Lambda → Webhook (PHP) → DB Exclusions List **
 
 ---
 
@@ -38,7 +38,7 @@ High-level flow:
 4. **Webhook (PHP Endpoint on our server)**
    - Receives POSTed JSON from Lambda.
    - Validates a shared secret header.
-   - Appends the event to a local JSON log file (and later, to MySQL).
+   - Appends the event to a SQL table for SES emailer to cross check on future mailings.
    - This log becomes the basis for a **suppression / “do not email”** list.
 
 ---
