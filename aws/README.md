@@ -54,11 +54,13 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
   - Examples:
     - Process S3 log files.
     - Lightweight API handlers for homelab tools.
+    - Lightweight API handlers for production tools.
+    - Daily AWS cost analysis emailer
 - Notes:
   - Runtime environments in use: [Python, Node.js, etc.]
   - IAM roles scoped minimally for security.
-- TODO:
-  - Document key Lambda scripts in `lambda/` folder.
+
+  - See key Lambda scripts in `lambda/` folder.
 
 ---
 
