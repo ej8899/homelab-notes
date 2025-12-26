@@ -89,6 +89,19 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
 
 ---
 
+### 9. DynamoDB
+    - Usage:
+      - Service monitor status and recording table, other misc high speed db connectors
+
+---
+
+### 10. End User Messaging
+  - Usage:
+      - notifications, OTP, etc and light two way comms with misc app users - shared #'s across varied apps.
+
+
+---
+
 ## Security & Governance
 - MFA enabled for all accounts.
 - Root account locked down, not used for day-to-day.
