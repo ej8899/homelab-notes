@@ -99,6 +99,11 @@ The focus is on lightweight, cost-efficient usage aligned with experimentation, 
   - Usage:
       - notifications, OTP, etc and light two way comms with misc app users - shared #'s across varied apps.
 
+---
+
+### 11. Cloudfront
+  - Usage:
+      - cdn various systems - primarily s3 items such as polly cache  (image caching handled elsewhere for image manipulation & optimization)
 
 ---
 
